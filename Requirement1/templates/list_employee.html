@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List Employees</title>
+</head>
+<body>
+
+    <table border="black" align="center" >
+        <tr>
+            <th>Employee ID</th>
+            <th>First Name</th>
+<!--            <th>Middle Name</th>-->
+            <th>Last Name</th>
+<!--            <th>Age</th>-->
+<!--            <th>Position</th>-->
+            <th>Action</th>
+        </tr>
+        {% for i in emp%}
+        <tr>
+            <td >
+                <lable>
+                    {{i.id}}
+                </lable>
+            </td>
+
+            <td>
+
+                <lable>
+                    {{i.first_name}}
+                </lable>
+            </td>
+<!--            <td>-->
+
+<!--                <lable>-->
+<!--                    {{i.middle_name}}-->
+<!--                </lable>-->
+<!--            </td>-->
+            <td>
+<!--                <lable>-->
+<!--                    Last Name-->
+<!--                </lable>-->
+                <label>
+                    {{i.last_name}}
+                </label>
+<!--            </td>-->
+<!--                        <td>-->
+
+<!--                <lable>-->
+<!--                    {{i.age}}-->
+<!--                </lable>-->
+<!--            </td>-->
+
+<!--            <td>-->
+<!--                <lable>-->
+<!--                    {{i.position}}-->
+<!--                </lable>-->
+<!--            </td>-->
+
+            <td>
+                <a href="/list_employees/{{i.id}}/delete"><button onclick="alert('The record will be permenantly deleted')"> delete</button></a>
+                <a href="/view_employee/{{i.id}}"><button onclick="/delete"> view</button></a>
+            </td>
+
+        </tr>
+
+
+        {% endfor %}
+
+    </table>
+<a href="/create_employee" ><button type="button" >Add more</button></a>
+
+</body>
+</html>

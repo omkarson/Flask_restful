@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee data</title>
+</head>
+<body>
+    <div align="center" style="border:2px">
+        <h3> Personal details of {{employee.first_name}} </h3>
+        <table>
+            <tr>
+                <td><label>Employee name :: </label></td>
+                <td>{{employee.first_name}}</td>
+                <td> {{employee.middle_name}}</td>
+                <td> {{employee.last_name}}</td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>Employees Position :: </label>
+                </td>
+
+                <td>
+                    {{employee.position}}
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>Employees age :: </label>
+                </td>
+
+                <td>
+                    {{employee.age}}
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <label>Employee Id :: </label>
+                </td>
+
+                <td>
+                    {{employee.id}}
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>Phone number :: </label>
+                </td>
+
+                <td>
+                    {{employee.phone}}
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>City :: </label>
+                </td>
+
+                <td>
+                    {{employee.city}}
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>State :: </label>
+                </td>
+
+                <td>
+                    {{employee.state}}
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="/update/{{employee.id}}"><button>Update</button></a>
+                </td>
+                <td>
+                    <a href="/"><button>Home</button></a>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+</body>
+</html>
